@@ -1,0 +1,53 @@
+// JDL definition for application 'MalAparcado V10' generated with command 'jhipster export-jdl' 
+// jhipster jdl jhipster-jdl.jdl
+
+application {
+  config {
+    applicationType monolith,
+    baseName demo,
+    packageName com.demo.webapp,
+//    authenticationType jwt,
+    authenticationType session,
+    prodDatabaseType postgresql,
+//    prodDatabaseType mysql,
+    devDatabaseType h2Disk,
+//    buildTool maven,
+    buildTool gradle,
+//    testFrameworks [cypress],
+    clientFramework angularX,
+    enableTranslation true,
+    nativeLanguage en,
+    languages [en, es]
+  }
+  entities Appuser}
+
+// JHI_USER: ID, LOGIN, PASSWORD_HASH, FIRST_NAME, LAST_NAME, EMAIL, IMAGE_URL, ACTIVATED, LANG_KEY, ACTIVATION_KEY, RESET_KEY, 
+// CREATED_BY, CREATED_DATE, RESET_DATE, LAST_MODIFIED_BY, LAST_MODIFIED_DATE  
+
+
+entity Appuser {
+    date Instant required
+    insuranceCompany String
+    balance BigDecimal
+    country String
+}
+
+// RELATIONSHIPS:
+relationship OneToOne {
+    Appuser{user(id) required} to User{appuser(id)}
+}
+
+// SET PAGINATION OPTIONS:
+paginate all with pagination
+// paginate ChatMessage with infinite-scroll
+// paginate all with infinite-scroll
+
+// SET SERVICE OPTIONS:
+service all with serviceImpl
+//service all with serviceClass
+
+// DTO:
+dto all with mapstruct
+
+// FILTERING:
+filter *

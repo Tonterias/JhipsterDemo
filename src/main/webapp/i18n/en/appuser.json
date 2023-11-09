@@ -1,0 +1,28 @@
+{
+  "demoApp": {
+    "appuser": {
+      "home": {
+        "title": "Appusers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Appuser",
+        "createOrEditLabel": "Create or edit a Appuser",
+        "notFound": "No Appusers found"
+      },
+      "created": "A new Appuser is created with identifier {{ param }}",
+      "updated": "A Appuser is updated with identifier {{ param }}",
+      "deleted": "A Appuser is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Appuser {{ id }}?"
+      },
+      "detail": {
+        "title": "Appuser"
+      },
+      "id": "ID",
+      "date": "Date",
+      "insuranceCompany": "Insurance Company",
+      "balance": "Balance",
+      "country": "Country",
+      "user": "User"
+    }
+  }
+}
